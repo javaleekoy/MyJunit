@@ -65,11 +65,20 @@ public class MyTest {
     }
 
     @Test
-    public void getEnumClasTest(){
+    public void getEnumClassTest(){
         System.out.println(EnumTest.sconde.toString());
         System.out.println(EnumTest.sconde.getKey());
         System.out.println(EnumTest.sconde.getValue());
         System.out.println(EnumTest.getValueByKey(1));
+    }
+
+
+    @Test
+    public void exceptionTest(){
+        System.out.println(new MyException("自定义异常,就这么样"));
+        System.out.println(new MyException());
+
+
     }
 
 }
