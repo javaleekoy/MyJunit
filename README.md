@@ -1,0 +1,2 @@
+# MyJunit
+test
