@@ -64,4 +64,12 @@ public class MyTest {
        System.out.println(str);
     }
 
+    @Test
+    public void getEnumClasTest(){
+        System.out.println(EnumTest.sconde.toString());
+        System.out.println(EnumTest.sconde.getKey());
+        System.out.println(EnumTest.sconde.getValue());
+        System.out.println(EnumTest.getValueByKey(1));
+    }
+
 }
