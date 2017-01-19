@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
 
+    <properties>
+        <spring.version>4.3.5.RELEASE</spring.version>
+    </properties>
+
     <dependencies>
         <!-- junit-->
         <dependency>
@@ -35,10 +39,18 @@
             <version>1.16.6</version>
         </dependency>
 
+        <!--log4j-->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+
+        <!--spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>

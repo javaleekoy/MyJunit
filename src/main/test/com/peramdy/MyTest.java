@@ -77,8 +77,6 @@ public class MyTest {
     public void exceptionTest(){
         System.out.println(new MyException("自定义异常,就这么样"));
         System.out.println(new MyException());
-
-
     }
 
 }
