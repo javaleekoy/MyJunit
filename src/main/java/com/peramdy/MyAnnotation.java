@@ -34,5 +34,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 public @interface MyAnnotation {
-
+  int id() default 0;
+  String value() default "";
 }

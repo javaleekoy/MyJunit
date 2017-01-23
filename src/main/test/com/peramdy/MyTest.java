@@ -79,4 +79,10 @@ public class MyTest {
         System.out.println(new MyException());
     }
 
+    @MyAnnotation(id = 1,value ="你好")
+    @Test
+    public void annotationTest(){
+        System.out.println("hello");
+    }
+
 }
