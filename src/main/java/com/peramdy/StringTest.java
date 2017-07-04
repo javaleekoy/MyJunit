@@ -10,6 +10,7 @@ public class StringTest {
 
     private Integer id;
     private String name;
+    private String address;
 
 
 }
