@@ -34,34 +34,56 @@ public class MyTest {
 
 
     @Test
-    public void cachedThreadTest(){
+    public void cachedThreadTest() {
         ThreadPoolTest.testCachedThread();
     }
 
     @Test
-    public void fixThreadTest(){
+    public void fixThreadTest() {
         ThreadPoolTest.testFixThread();
     }
 
     @Test
-    public void agentInActiveDays(){
-        List<Integer> list1=new ArrayList<Integer>();
+    public void agentInActiveDays() {
+        List<Integer> list1 = new ArrayList<Integer>();
         list1.add(1);
-        List<Integer> list2=new ArrayList<Integer>();
+        List<Integer> list2 = new ArrayList<Integer>();
         list2.add(2);
         list2.add(1);
-        List<Integer> list3=new ArrayList<Integer>();
+        List<Integer> list3 = new ArrayList<Integer>();
         list3.add(3);
         list3.add(2);
         list3.add(1);
 
-        agentTest.agentInActiveDadys(list1,list2,list3);
+        agentTest.agentInActiveDadys(list1, list2, list3);
     }
 
     @Test
-    public void getAddDaysTest(){
-       String str=DateTest.getAddDay(1);
-       System.out.println(str);
+    public void getAddDaysTest() {
+        String str = DateTest.getAddDay(1);
+        System.out.println(str);
     }
 
+
+    @Test
+    public void sendFcmMessage() {
+        FcmTest.pushFCMNotification();
+        System.out.printf("send end!!!");
+    }
+
+    @Test
+    public void apacheCommonHttpClientPost() {
+        HttpClientTest.apacheCommonHttpClientPost();
+    }
+
+    @Test
+    public void apacheHttpClientPost() {
+        HttpClientTest.apacheHttpClientPost();
+    }
+
+
+    @Test
+    public void apacheCommonHttpClientGet() {
+        HttpClientTest.apacheCommonHttpClientGet();
+    }
 }
