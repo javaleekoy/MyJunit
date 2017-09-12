@@ -2,6 +2,8 @@ package com.peramdy;
 
 import org.junit.Test;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -86,4 +88,44 @@ public class MyTest {
     public void apacheCommonHttpClientGet() {
         HttpClientTest.apacheCommonHttpClientGet();
     }
+
+
+    @Test
+    public void testSalt() {
+
+        try {
+            String password = SaltUtil.getEncryptedPwd("0x570xff");
+            System.out.println("--------------------------------------");
+            System.out.println(password);
+            System.out.println("--------------------------------------");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Test
+    public void testOne() {
+        Date now = new Date();
+        Long timeStamp = now.getTime() / 1000;
+
+        String salt = timeStamp.toString();
+        System.out.println(salt);
+
+        SaltTest encoderMd5 = new SaltTest(salt, "MD5");
+        String encode = encoderMd5.encode("0x570xff");
+        System.out.println(encode);
+    }
+
+    @Test
+    public void testTwo() {
+
+        Date now = new Date();
+        System.out.println(now.getTime());
+        System.out.println(now.getTime() / 1000);
+
+    }
+
 }
